@@ -44,10 +44,10 @@ export default function Bar(){
               update({ value: ' ', index: 6 });
             },
           },
-          "> profile" : {
-            description: 'Navigate to your admin profile',
+          "> staff" : {
+            description: 'List Of Staff Working For TopicList',
             run: ()=>{
-              router.push('/profile')
+              router.push('/staff')
               setValue('')
               setSearch(false)
               update({ value: ' ', index: 6 });

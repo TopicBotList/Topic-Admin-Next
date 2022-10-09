@@ -1,6 +1,6 @@
 import { FaCrown, FaPaintBrush, FaPaintRoller, FaUser, FaUserCog } from "react-icons/fa";
 
-export default function Profile(){
+export default function Staff(){
     return(<>
     <div className="w-full flex flex-col py-2">
         <div className="flex items-center bg-blue-900/10 p-3">
