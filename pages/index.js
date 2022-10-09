@@ -48,11 +48,11 @@ export default function App(){
         <div className="h-[200px] py-2 overflow-auto">
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
             <p className="font-semibold text-lg text-white/80">Announcement title</p>
-            <p className="font-semibold ml-4 text-white/60">LLOOINGG announcement content</p>
+            <p className="font-semibold ml-4 text-white/60">Best Member of our team has lost us.</p>
           </div>
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
             <p className="font-semibold text-lg text-white/80">Another Announcement title</p>
-            <p className="font-semibold ml-4 text-white/60">Another LLOOINGG announcement content</p>
+            <p className="font-semibold ml-4 text-white/60">TopicAdmin Made By PopPlays.</p>
           </div>
         </div>
       </div>
