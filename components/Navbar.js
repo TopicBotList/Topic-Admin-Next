@@ -19,7 +19,7 @@ export default function Navbar({children}){
             <SidebarItem onClick={()=> router.push('/')} text={'Home'} icon={<FaHome/>}/>
             <SidebarItem onClick={()=> router.push('/bots')} text={'Bots'} icon={<FaRobot/>}/>
             <SidebarItem onClick={()=> router.push('/servers')} text={'Servers'} icon={<FaServer/>}/>
-            <SidebarItem onClick={()=> router.push('/profile')} text={'Profile'} icon={<FaUser/>}/>
+            <SidebarItem onClick={()=> router.push('/staff')} text={'Staff'} icon={<FaUser/>}/>
 
         </div>
     </div>
