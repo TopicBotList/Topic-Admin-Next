@@ -40,10 +40,11 @@ export default function Staff(){
     </div>
     <div className="w-full flex flex-col py-2">
         <div className="flex items-center bg-blue-900/10 p-3">
-            <img src={'https://cdn.topiclist.xyz/images/png/TopicList5.png'} className={'h-[150px] w-[150px] rounded-lg'}></img>
+            <img src={'https://cdn.discordapp.com/avatars/887549958931247137/15442d7d1a016ddb2dcc819423d14bee.png?size=1024'} className={'h-[150px] w-[150px] rounded-lg'}></img>
             <div className="flex flex-col h-[130px] ml-3">
-                <p className="font-bold text-4xl">Username</p>
-                <p className="font-semibold text-lg text-white/70">Short bio</p>
+                <p className="font-bold text-4xl">HATSUNE MIKU</p>
+                <p className="font-semibold text-lg text-white/70">Hatsune Miku is my waifu ❤️ 
+⚡ Minato Namikaze ⚡ is greatest superhero of the time.</p>
                 <div className={'h-full'}/>
                 <div className="flex items-center">
                     <FaCrown className="text-3xl text-yellow-400/70"/>
