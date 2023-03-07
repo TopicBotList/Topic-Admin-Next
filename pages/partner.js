@@ -1,4 +1,4 @@
-import { FaCrown, FaPaintBrush, FaHandshake, FaPaintRoller, FaUser, FaUserCog } from "react-icons/fa";
+import { FaCrown, FaPaintBrush, , FaPaintRoller, FaUser, FaUserCog } from "react-icons/fa";
 
 export default function Staff(){
 return(<>
@@ -10,7 +10,6 @@ return(<>
                 <p className="font-semibold text-lg text-white/70"></p>
                 <div className={'h-full'}/>
                 <div className="flex items-center">
-                    <FaHandshake className="ml-3 text-3xl text-blue-400/70"/>
                 </div>
             </div>
             
