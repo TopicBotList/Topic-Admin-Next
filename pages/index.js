@@ -20,7 +20,7 @@ export default function App(){
         </div>
         <div className="ml-3 flex flex-col">
           <p className="text-sm font-semibold text-white/50">Approved Bots</p>
-          <p className="text-lg font-semibold text-white">0</p>
+          <p className="text-lg font-semibold text-white">42</p>
         </div>
       </div>
       <div className="mx-2 h-[80px] w-[200px] rounded-lg bg-blue-800/10 flex items-center px-3">
@@ -29,7 +29,7 @@ export default function App(){
         </div>
         <div className="ml-3 flex flex-col">
           <p className="text-sm font-semibold text-white/50">Servers</p>
-          <p className="text-lg font-semibold text-white">0</p>
+          <p className="text-lg font-semibold text-white">6</p>
         </div>
       </div>
       <div className="mx-2 h-[80px] w-[200px] rounded-lg bg-blue-800/10 flex items-center px-3">
@@ -38,7 +38,7 @@ export default function App(){
         </div>
         <div className="ml-3 flex flex-col">
           <p className="text-sm font-semibold text-white/50">Users</p>
-          <p className="text-lg font-semibold text-white">0</p>
+          <p className="text-lg font-semibold text-white">126</p>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default function App(){
         <div className="h-[200px] py-2 overflow-auto">
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
             <p className="font-semibold text-lg text-white/80">Announcement title</p>
-            <p className="font-semibold ml-4 text-white/60">Best Member of our team has lost us.</p>
+            <p className="font-semibold ml-4 text-white/60">Head of the coding department will be Toxic Dev.</p>
           </div>
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
             <p className="font-semibold text-lg text-white/80">Another Announcement title</p>
