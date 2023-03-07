@@ -52,7 +52,17 @@ export default function Bar(){
               setSearch(false)
               update({ value: ' ', index: 6 });
             },
-          }
+          },
+          "> Partners" : {
+            description: 'List Of Partners For TopicList & TopicServers',
+            run: ()=>{
+              router.push('/partners')
+              setValue('')
+              setSearch(false)
+              update({ value: ' ', index: 6 });
+            },
+          },
+
           
         },
       },
