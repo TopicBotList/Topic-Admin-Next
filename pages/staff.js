@@ -58,10 +58,11 @@ export default function Staff(){
     </div>
     <div className="w-full flex flex-col py-2">
         <div className="flex items-center bg-blue-900/10 p-3">
-            <img src={'https://cdn.topiclist.xyz/images/png/TopicList5.png'} className={'h-[150px] w-[150px] rounded-lg'}></img>
+            <img src={'https://cdn.discordapp.com/avatars/899722893603274793/2d7f150e0c587d2c70ddb58fa3193e18.png?size=1024'} className={'h-[150px] w-[150px] rounded-lg'}></img>
             <div className="flex flex-col h-[130px] ml-3">
-                <p className="font-bold text-4xl">Username</p>
-                <p className="font-semibold text-lg text-white/70">Short bio</p>
+                <p className="font-bold text-4xl">Asuka</p>
+                <p className="font-semibold text-lg text-white/70">What if we kissed exchanged our public key? 👉 👈My Profile
+ Python  ☕ Java https://github.com/zerotwo36</p>
                 <div className={'h-full'}/>
                 <div className="flex items-center">
                     <FaCrown className="text-3xl text-yellow-400/70"/>
