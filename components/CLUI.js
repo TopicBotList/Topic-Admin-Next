@@ -56,7 +56,7 @@ export default function Bar(){
           "> Partners" : {
             description: 'List Of Partners For TopicList & TopicServers',
             run: ()=>{
-              router.push('/partners')
+              router.push('/partner')
               setValue('')
               setSearch(false)
               update({ value: ' ', index: 6 });
