@@ -1,4 +1,4 @@
-import { FaCrown, FaHandshake, FaPaintBrush, FaPaintRoller, FaUser, FaUserCog } from "react-icons/fa";
+import { FaCrown, FaHandshake, FaPaintBrush, IoBanSharp, FaPaintRoller, FaUser, FaUserCog } from "react-icons/fa";
 
 export default function Staff(){
 return(<>

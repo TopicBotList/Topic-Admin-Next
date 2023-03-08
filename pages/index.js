@@ -1,4 +1,4 @@
-import { FaCheckCircle, FaClipboard, FaRobot, FaServer, FaUser } from "react-icons/fa";
+import { FaCheckCircle, FaClipboard, IoBanSharp, FaRobot, FaServer, FaUser } from "react-icons/fa";
 
 export default function App(){
  
