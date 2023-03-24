@@ -1,22 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const Staff = () => {
-  const [botInfo, setBotInfo] = useState(null);
+const Staff = ({ botInfo }) => {
   const [showReasonBox, setShowReasonBox] = useState(false);
   const [reason, setReason] = useState('');
-
-  useEffect(() => {
-    const fetchBotInfo = async () => {
-      try {
-        const response = await fetch('https://adminapi.topiclist.xyz');
-        const data = await response.json();
-        setBotInfo(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchBotInfo();
-  }, []);
 
   const handleButtonClick = (action) => {
     setShowReasonBox(true);
@@ -48,18 +34,20 @@ const Staff = () => {
               <p className="font-semibold text-lg text-white/70">{botInfo.short_description}</p>
               <div className="h-full" />
               <div className="flex items-center">
-                <button
-                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
-                  onClick={() => handleButtonClick('ban')}
-                >
-                  Ban
-                </button>
-                <button
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                  onClick={() => handleButtonClick('remove')}
-                >
-                  Remove
-                </button>
+                <div className="ml-2">
+                  <button
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
+                    onClick={() => handleButtonClick('ban')}
+                  >
+                    Ban
+                  </button>
+                  <button
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => handleButtonClick('remove')}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           </div>
