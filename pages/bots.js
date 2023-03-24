@@ -1,4 +1,4 @@
-import { FaCrown, FaHandshake, FaPaintBrush, IoBanSharp, FaPaintRoller, FaUser, FaUserCog, IoHammer, MdFolderDelete } from "react-icons/all";
+import { IoHammer, AiFillDelete } from "react-icons/all";
 import { useState, useEffect } from "react";
 
 export default function Staff(){
@@ -59,7 +59,7 @@ export default function Staff(){
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                     onClick={() => handleButtonClick('remove')}
                   >
-                    <MdFolderDelete className="mr-1" />
+                    <AiFillDelete className="mr-1" />
                     Remove
                   </button>
                 </div>
