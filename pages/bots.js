@@ -1,23 +1,25 @@
-import { FaHandshake, IoHammer, AiFillDelete } from "react-icons/all";
 import { useState, useEffect } from "react";
 
-export default function Staff() {
+const Staff = () => {
   const [botInfo, setBotInfo] = useState(null);
   const [showReasonBox, setShowReasonBox] = useState(false);
   const [reason, setReason] = useState('');
 
-  // Fetch bot info from API on component mount
   useEffect(() => {
-    fetch('https://adminapi.topiclist.xyz')
-      .then(response => response.json())
-      .then(data => setBotInfo(data))
-      .catch(error => console.log(error));
+    const fetchBotInfo = async () => {
+      try {
+        const response = await fetch('https://adminapi.topiclist.xyz');
+        const data = await response.json();
+        setBotInfo(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchBotInfo();
   }, []);
 
-  // Function to handle ban or remove button click
   const handleButtonClick = (action) => {
     setShowReasonBox(true);
-    // Set default reason based on action
     if (action === 'ban') {
       setReason('This bot has violated our terms of service.');
     } else if (action === 'remove') {
@@ -25,7 +27,6 @@ export default function Staff() {
     }
   };
 
-  // Function to handle reason input change
   const handleReasonChange = (event) => {
     setReason(event.target.value);
   };
@@ -47,23 +48,18 @@ export default function Staff() {
               <p className="font-semibold text-lg text-white/70">{botInfo.short_description}</p>
               <div className="h-full" />
               <div className="flex items-center">
-                <FaHandshake className="text-3xl text-yellow-400/70" />
-                <div className="ml-2">
-                  <button
-                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
-                    onClick={() => handleButtonClick('ban')}
-                  >
-                    <IoHammer className="mr-1" />
-                    Ban
-                  </button>
-                  <button
-                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onClick={() => handleButtonClick('remove')}
-                  >
-                    <AiFillDelete className="mr-1" />
-                    Remove
-                  </button>
-                </div>
+                <button
+                  className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
+                  onClick={() => handleButtonClick('ban')}
+                >
+                  Ban
+                </button>
+                <button
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                  onClick={() => handleButtonClick('remove')}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           </div>
@@ -82,4 +78,6 @@ export default function Staff() {
       )}
     </>
   );
-}
+};
+
+export default Staff;
