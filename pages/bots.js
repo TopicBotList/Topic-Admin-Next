@@ -8,8 +8,8 @@ export default function Staff(){
           <img src={'https://cdn.topiclist.xyz/images/png/TopicList5.png'} className={'h-[150px] w-[150px] rounded-lg'}></img>
           <div className="flex flex-col h-[130px] ml-3">
             <div className="flex items-center">
-              <img src="https://cdn.discordapp.com/avatars/1234567890/abcdef1234567890abcdef1234567890.png?size=128" alt="Bot avatar" className="w-12 h-12 rounded-full"/>
-              <h1 className="text-4xl font-bold ml-4">Bot username#1234</h1>
+              <img src="https://cdn.topiclist.xyz/images/png/TopicList5.png" alt="Bot avatar" className="w-12 h-12 rounded-full"/>
+              <h1 className="text-4xl font-bold ml-4">Topic™#5385</h1>
             </div>
             <p className="font-semibold text-lg text-white/70">Discord bot description goes here</p>
             <div className="h-full"></div>
