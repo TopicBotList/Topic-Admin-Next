@@ -1,32 +1,84 @@
-import { FaHammer, MdOutlinePersonRemove } from "react-icons/fa";
+import { FaCrown, FaHandshake, FaPaintBrush, IoBanSharp, FaPaintRoller, FaUser, FaUserCog, IoHammer, MdFolderDelete } from "react-icons/all";
+import { useState, useEffect } from "react";
 
 export default function Staff(){
+  const [botInfo, setBotInfo] = useState(null);
+  const [showReasonBox, setShowReasonBox] = useState(false);
+  const [reason, setReason] = useState('');
+
+  // Fetch bot info from API on component mount
+  useEffect(() => {
+    fetch('https://adminapi.topiclist.xyz')
+      .then(response => response.json())
+      .then(data => setBotInfo(data));
+  }, []);
+
+  // Function to handle ban or remove button click
+  const handleButtonClick = (action) => {
+    setShowReasonBox(true);
+    // Set default reason based on action
+    if (action === 'ban') {
+      setReason('This bot has violated our terms of service.');
+    } else if (action === 'remove') {
+      setReason('This bot is no longer active or maintained.');
+    }
+  };
+
+  // Function to handle reason input change
+  const handleReasonChange = (event) => {
+    setReason(event.target.value);
+  };
+
   return(
     <>
-      <div className="w-full flex flex-col py-2">
-        <div className="flex items-center bg-blue-900/10 p-3">
-          <img src={'https://cdn.topiclist.xyz/images/png/TopicList5.png'} className={'h-[150px] w-[150px] rounded-lg'}></img>
-          <div className="flex flex-col h-[130px] ml-3">
-            <div className="flex items-center">
-              <img src="https://cdn.topiclist.xyz/images/png/TopicList5.png" alt="Bot avatar" className="w-12 h-12 rounded-full"/>
-              <h1 className="text-4xl font-bold ml-4">Topic™#5385</h1>
-            </div>
-            <p className="font-semibold text-lg text-white/70">Discord bot description goes here</p>
-            <div className="h-full"></div>
-            <div className="flex items-center space-x-4">
-              <FaHandshake className="text-3xl text-yellow-400/70"/>
-              <button className="flex items-center bg-red-600 px-2 py-1 rounded-lg text-white hover:bg-red-700">
-                <FaHammer className="mr-2"/> Ban
-              </button>
-              <button className="flex items-center bg-yellow-600 px-2 py-1 rounded-lg text-white hover:bg-yellow-700">
-                <MdOutlinePersonRemove className="mr-2"/> Remove
-              </button>
+      {botInfo && (
+        <div className="w-full flex flex-col py-2">
+          <div className="flex items-center bg-blue-900/10 p-3">
+            <img
+              src={botInfo.avatar_url}
+              alt={`${botInfo.username}'s avatar`}
+              className="h-[150px] w-[150px] rounded-lg"
+            />
+            <div className="flex flex-col h-[130px] ml-3">
+              <p className="font-bold text-4xl">
+                {botInfo.username}#{botInfo.discriminator}
+              </p>
+              <p className="font-semibold text-lg text-white/70">{botInfo.short_description}</p>
+              <div className="h-full" />
+              <div className="flex items-center">
+                <FaHandshake className="text-3xl text-yellow-400/70" />
+                <div className="ml-2">
+                  <button
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
+                    onClick={() => handleButtonClick('ban')}
+                  >
+                    <IoHammer className="mr-1" />
+                    Ban
+                  </button>
+                  <button
+                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onClick={() => handleButtonClick('remove')}
+                  >
+                    <MdFolderDelete className="mr-1" />
+                    Remove
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
+          {showReasonBox && (
+            <div className="mt-4">
+              <label className="font-semibold">Reason:</label>
+              <textarea
+                className="block w-full rounded border border-gray-300 p-2 mt-1"
+                rows="4"
+                value={reason}
+                onChange={handleReasonChange}
+              />
+            </div>
+          )}
         </div>
-      </div>
+      )}
     </>
   );
 }
-
-
