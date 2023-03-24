@@ -1,7 +1,7 @@
-import { IoHammer, AiFillDelete } from "react-icons/all";
+import { FaHandshake, IoHammer, AiFillDelete } from "react-icons/all";
 import { useState, useEffect } from "react";
 
-export default function Staff(){
+export default function Staff() {
   const [botInfo, setBotInfo] = useState(null);
   const [showReasonBox, setShowReasonBox] = useState(false);
   const [reason, setReason] = useState('');
@@ -10,7 +10,8 @@ export default function Staff(){
   useEffect(() => {
     fetch('https://adminapi.topiclist.xyz')
       .then(response => response.json())
-      .then(data => setBotInfo(data));
+      .then(data => setBotInfo(data))
+      .catch(error => console.log(error));
   }, []);
 
   // Function to handle ban or remove button click
@@ -29,7 +30,7 @@ export default function Staff(){
     setReason(event.target.value);
   };
 
-  return(
+  return (
     <>
       {botInfo && (
         <div className="w-full flex flex-col py-2">
