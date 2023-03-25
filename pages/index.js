@@ -47,12 +47,12 @@ export default function App(){
         <p className="py-4 px-4 bg-blue-800/10 font-semibold text-lg">Today&apos;s announcements</p>
         <div className="h-[200px] py-2 overflow-auto">
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
-            <p className="font-semibold text-lg text-white/80">Announcement title</p>
-            <p className="font-semibold ml-4 text-white/60">Head of the coding department will be Toxic Dev.</p>
+            <p className="font-semibold text-lg text-white/80">Partners Update</p>
+            <p className="font-semibold ml-4 text-white/60">All the partner will be managed from the Admin Panel.</p>
           </div>
           <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
-            <p className="font-semibold text-lg text-white/80">Another Announcement title</p>
-            <p className="font-semibold ml-4 text-white/60">TopicAdmin Made By PopPlays.</p>
+            <p className="font-semibold text-lg text-white/80">First Announcement</p>
+            <p className="font-semibold ml-4 text-white/60">TopicAdmin Made By RanveerSoni.</p>
           </div>
         </div>
       </div>
