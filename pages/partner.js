@@ -1,6 +1,6 @@
 import { FaHandshake } from "react-icons/fa";
 
-export default function Staff() {
+export default function Partner() {
   return (
     <>
       <div className="w-full flex flex-col py-2 relative">
@@ -20,8 +20,8 @@ export default function Staff() {
             </div>
           </div>
         </div>
-        <div className="absolute top-2 right-0 bg-white/50 px-2 py-1 rounded-full mt-2">
-          <p className="text-sm text-blue-700">Toxic Dev#5936</p>
+        <div className="absolute top-2 right-0 px-2 py-1 rounded-full mt-2 bg-blue-700">
+          <p className="text-sm text-white">Toxic Dev#5936</p>
         </div>
       </div>
     </>

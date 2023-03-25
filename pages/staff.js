@@ -31,7 +31,6 @@ export default function Staff(){
                 <div className="flex items-center">
                     <FaCrown className="text-3xl text-yellow-400/70"/>
                     <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
-                    <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
 
                 </div>
             </div>
@@ -48,7 +47,6 @@ export default function Staff(){
                 <div className={'h-full'}/>
                 <div className="flex items-center">
                     <FaCrown className="text-3xl text-yellow-400/70"/>
-                    <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
                     <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
 
                 </div>
@@ -67,8 +65,7 @@ export default function Staff(){
                 <div className="flex items-center">
                     <FaCrown className="text-3xl text-yellow-400/70"/>
                     <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
-                    <FaUserCog className="ml-3 text-3xl text-blue-400/70"/>
-
+                    
                 </div>
             </div>
             
