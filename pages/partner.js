@@ -20,7 +20,7 @@ export default function Staff() {
             </div>
           </div>
         </div>
-        <div className="absolute top-2 right-0 px-2 py-1 rounded-full mt-2 bg-blue-700 ml-4">
+        <div className="absolute top-2 right-0 px-2 py-1 rounded-full mt-2 bg-blue-700 ml-2">
           <p className="text-sm text-white pr-4">Toxic Dev#5936</p>
         </div>
       </div>
