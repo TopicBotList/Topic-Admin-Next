@@ -3,25 +3,29 @@ import { useState } from "react";
 export default function Status() {
   const [statusData, setStatusData] = useState([
     {
-      name: "API",
+      name: "TopicList",
       status: "Online",
-      description: "All services operational",
+      description: "Undergoing Revamp (Ain't Comming Back Soon)",
+      url: "https://topicist.xyz",
     },
     {
-      name: "Main Site",
-      status: "Degraded Performance",
-      description: "Undergoing maintenance",
+      name: "API",
+      status: "Operational",
+      description: "Working Fine Chef!",
+      url: "https://api.topiclist.xyz",
     },
     {
       name: "Servers",
       status: "Online",
-      description: "All services operational",
+      description: "Working Fine Chef!",
+      url: "https://servers.topiclist.xyz",
     },
     {
         name: "Admin Panel",
         status: "Online",
-        description: "All services operational",
-    },
+        description: "Working Fine Chef!",
+        url: "https://admin.topiclist.xyz",
+      },
   ]);
 
   return (
@@ -35,7 +39,7 @@ export default function Status() {
             </p>
           </div>
         </div>
-        <div className="bg-green-500 text-white py-2 text-center font-semibold uppercase tracking-wider">
+        <div className="bg-blue-800 text-white py-2 text-center font-semibold uppercase tracking-wider">
           Operational
         </div>
       </div>
@@ -47,15 +51,12 @@ export default function Status() {
                 <h2 className="text-lg font-semibold">{server.name}</h2>
                 <p className={`mt-2 text-sm font-semibold text-${server.status === 'Online' ? 'green' : server.status === 'Degraded Performance' ? 'yellow' : 'red'}-500`}>{server.status}</p>
                 <p className="mt-2 text-sm">{server.description}</p>
+                {server.url && (
+                  <a href={server.url} className="text-blue-500 hover:text-blue-600">{server.url}</a>
+                )}
               </div>
             </div>
           ))}
-        </div>
-      </div>
-      <div className="bg-blue-900 text-white py-6">
-        <div className="container mx-auto">
-          <p className="text-lg font-semibold">Website URL:</p>
-          <p className="text-sm">https://topiclist.xyz</p>
         </div>
       </div>
     </>
