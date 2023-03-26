@@ -62,6 +62,15 @@ export default function Bar(){
               update({ value: ' ', index: 6 });
             },
           },
+          "> Status" : {
+            description: 'Status Page',
+            run: ()=>{
+              router.push('/status')
+              setValue('')
+              setSearch(false)
+              update({ value: ' ', index: 6 });
+            }
+          }
 
           
         },
@@ -85,7 +94,7 @@ export default function Bar(){
               setValue('')
               setSearch(false)
               update({ value: ' ', index: 6 });
-            },
+            }
           }
         },
         run: ()=>{
