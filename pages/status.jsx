@@ -25,7 +25,7 @@ export default function Status() {
         status: "Online",
         description: "Working Fine Chef!",
         url: "https://admin.topiclist.xyz",
-      },
+      }
   ]);
 
   return (
@@ -33,9 +33,9 @@ export default function Status() {
       <div className="w-full bg-blue-900 text-white flex flex-col py-2 relative">
         <div className="flex items-center p-3">
           <div className="flex flex-col ml-3">
-            <p className="font-bold text-4xl">Service Status</p>
+            <p className="font-bold text-4xl">Topic Status</p>
             <p className="font-semibold text-lg">
-              Check the status of our services below
+            Check our service status
             </p>
           </div>
         </div>
