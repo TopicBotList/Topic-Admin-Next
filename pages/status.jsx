@@ -2,30 +2,10 @@ import { useState } from "react";
 
 export default function Status() {
   const [statusData, setStatusData] = useState([
-    {
-        name: "TopicList",
-        status: "Online",
-        description: "Undergoing Revamp (Ain't Comming Back Soon)",
-        url: "https://topicist.xyz",
-      },
-      {
-        name: "API",
-        status: "Operational",
-        description: "Working Fine Chef!",
-        url: "https://api.topiclist.xyz",
-      },
-      {
-        name: "Servers",
-        status: "Online",
-        description: "Working Fine Chef!",
-        url: "https://servers.topiclist.xyz",
-      },
-      {
-          name: "Admin Panel",
-          status: "Online",
-          description: "Working Fine Chef!",
-          url: "https://admin.topiclist.xyz",
-        }
+    { name: "TopicList", status: "Online", description: "Undergoing Revamp (Ain't Comming Back Soon)", url: "https://topicist.xyz" },
+    { name: "API", status: "Operational", description: "Working Fine Chef!", url: "https://api.topiclist.xyz" },
+    { name: "Servers", status: "Online", description: "Working Fine Chef!", url: "https://servers.topiclist.xyz" },
+    { name: "Admin Panel", status: "Online", description: "Working Fine Chef!", url: "https://admin.topiclist.xyz" }
   ]);
 
   return (
@@ -33,9 +13,7 @@ export default function Status() {
       <div className="w-full h-24 flex items-center justify-center bg-blue-900 text-white flex-col py-2 relative">
         <div className="flex flex-col items-center">
           <p className="font-bold text-2xl text-center">Topic Status</p>
-          <p className="font-semibold text-sm text-center">
-          Check our service status
-          </p>
+          <p className="font-semibold text-sm text-center">Check our service status</p>
         </div>
       </div>
       <div className="bg-black text-white py-2 text-center font-semibold uppercase tracking-wider">
