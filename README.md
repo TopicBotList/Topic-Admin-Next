@@ -8,15 +8,11 @@ Code For Topic Admin
 </p>
 
 <hr> 
+
 # Coded In Nextjs    
 
 
  <img src="https://skillicons.dev/icons?i=next,nodejs&theme=dark" />
-
-
-# Credites to   PopPlays
- [https://github.com/popQA17]
-
 
 
 # Note:
