@@ -16,9 +16,7 @@ export default function Status() {
           <p className="font-semibold text-sm text-center">Check our service status</p>
         </div>
       </div>
-      <div className="bg-black text-white py-2 text-center font-semibold uppercase tracking-wider">
-        Operational
-      </div>
+      <div className="bg-black text-white py-2 text-center font-semibold uppercase tracking-wider">Operational</div>
       <div className="container mx-auto my-6">
         <div className="flex flex-wrap -mx-3">
           {statusData.map((server) => (
@@ -27,9 +25,7 @@ export default function Status() {
                 <h2 className="text-base font-semibold text-blue-500">{server.name}</h2>
                 <p className={`mt-2 text-xs font-semibold text-${server.status === 'Online' ? 'green' : server.status === 'Degraded Performance' ? 'yellow' : 'red'}-500`}>{server.status}</p>
                 <p className="mt-2 text-xs text-blue-200">{server.description}</p>
-                {server.url && (
-                  <a href={server.url} className="text-blue-500 hover:text-blue-600 text-xs">{server.url}</a>
-                )}
+                {server.url && <a href={server.url} className="text-blue-500 hover:text-blue-600 text-xs">{server.url}</a>}
               </div>
             </div>
           ))}
