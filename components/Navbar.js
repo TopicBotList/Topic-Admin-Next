@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Bar from "./CLUI";
-import { FaHome, FaRobot, FaServer, FaHandshake, IoBanSharp, FaSignOutAlt, FaUser, FaCogs } from 'react-icons/fa'
+import { FaHome, FaRobot, FaServer, FaHandshake, IoBanSharp, FaSignOutAlt, FaUser, FaCogs, FaGlobeAmericas } from 'react-icons/fa'
 import SidebarItem from "./SidebarItem";
 import { useRouter } from "next/router";
 export default function Navbar({children}){
@@ -22,6 +22,7 @@ export default function Navbar({children}){
             <SidebarItem onClick={()=> router.push('/staff')} text={'Staff'} icon={<FaUser/>}/>
             <SidebarItem onClick={()=> router.push('/partner')} text={'Partners'} icon={<FaHandshake/>}/>
             <SidebarItem onClick={()=> router.push('/status')} text={'Status'} icon={<FaCogs/>}/>
+            <SidebarItem onClick={()=> router.push('/analytics')} text={'Analytics'} icon={<FaGlobeAmericas/>}/>
 
         </div>
     </div>

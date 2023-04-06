@@ -62,6 +62,15 @@ export default function Bar(){
               update({ value: ' ', index: 6 });
             },
           },
+          "> Analytics" : {
+            description: 'Analytics for TopicBots & TopicServer',
+            run: ()=>{
+              router.push('/analytics')
+              setValue('')
+              setSearch(false)
+              update({ value: ' ', index: 6 });
+            },
+          },
           "> Status" : {
             description: 'Status Page',
             run: ()=>{
