@@ -30,24 +30,24 @@ export default function Analytics() {
   }, []);
 
   return (
-    <>
-      <div className="flex items-center bg-blue-800 p-3">
+    <div className="bg-blue-800 p-3">
+      <div className="flex items-center">
         <FaGlobe className="text-3xl text-white mr-3" />
         <p className="font-semibold text-lg text-white">Visitors from around the world:</p>
-        <div className="flex flex-wrap ml-3">
-          {visitors.map((visitor) => (
-            <div className="flex items-center mr-3 mb-3" key={visitor.id}>
-              <CountryFlag
-                countryCode={visitor.country}
-                svg
-                className="mr-1"
-                style={{ width: '24px', height: '16px' }}
-              />
-              <p className="text-white">{visitor.id}</p>
-            </div>
-          ))}
-        </div>
       </div>
-    </>
+      <div className="flex flex-wrap mt-3">
+        {visitors.map((visitor) => (
+          <div className="flex items-center mr-3 mb-3" key={visitor.id}>
+            <CountryFlag
+              countryCode={visitor.country}
+              svg
+              className="mr-1"
+              style={{ width: '24px', height: '16px' }}
+            />
+            <p className="text-white">{visitor.id}</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
