@@ -4,8 +4,8 @@ export default function Status() {
   const [statusData, setStatusData] = useState([
     { name: "TopicList", status: "Online", description: "Undergoing Revamp (Ain't Comming Back Soon)", url: "https://topicist.xyz" },
     { name: "API", status: "Operational", description: "Working Fine Chef!", url: "https://api.topiclist.xyz" },
-    { name: "Servers", status: "Online", description: "Working Fine Chef!", url: "https://servers.topiclist.xyz" },
-    { name: "Admin Panel", status: "Online", description: "Working Fine Chef!", url: "https://admin.topiclist.xyz" }
+    { name: "Admin Panel", status: "Online", description: "Working Fine Chef!", url: "https://admin.topiclist.xyz" },
+    { name: "Beta", status: "Online", description: "Working Fine Chef!", url: "https://beta.topiclist.xyz" }
   ]);
 
   return (
