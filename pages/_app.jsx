@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-import Navbar from '../components/Interface/Navbar'
+import Navbar from '../components/Navbar'
 import NextNProgress from 'nextjs-progressbar'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useRouter } from 'next/router'
