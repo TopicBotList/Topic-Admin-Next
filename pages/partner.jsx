@@ -12,7 +12,8 @@ export default function Staff() {
           <div className="flex flex-col h-[100px] ml-2">
             <p className="font-bold text-3xl">InfinityBots</p>
             <p className="font-semibold text-sm text-white/70">
-              We make it easier for you to advertise and grow your Discord Bots using our bot packs, vanity link's, stylish widget's and more.
+              We make it easier for you to advertise and grow your Discord Bots
+              using our bot packs, vanity link's, stylish widget's and more.
             </p>
             <div className="h-full" />
             <div className="flex items-center">

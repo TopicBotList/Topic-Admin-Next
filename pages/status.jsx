@@ -2,10 +2,10 @@ import { useState } from "react";
 
 export default function Status() {
   const [statusData, setStatusData] = useState([
-    { name: "TopicList", status: "Online", description: "Undergoing Revamp (Ain't Comming Back Soon)", url: "https://topicist.xyz" },
-    { name: "API", status: "Operational", description: "Working Fine Chef!", url: "https://api.topiclist.xyz" },
-    { name: "Admin Panel", status: "Online", description: "Working Fine Chef!", url: "https://admin.topiclist.xyz" },
-    { name: "Beta", status: "Online", description: "Working Fine Chef!", url: "https://beta.topiclist.xyz" }
+    { name: "TopicList", status: "Online", description: "Working Fine Chief!", url: "https://topicist.xyz" },
+    { name: "API", status: "Operational", description: "Working Fine Chief!", url: "https://api.topiclist.xyz" },
+    { name: "Admin Panel", status: "Online", description: "Working Fine Chief!", url: "https://admin.topiclist.xyz" },
+    { name: "Beta", status: "Online", description: "Working Fine Chief!", url: "https://beta.topiclist.xyz" }
   ]);
 
   return (

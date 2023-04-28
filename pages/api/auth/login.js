@@ -22,7 +22,9 @@ export default withIronSession(
     };
 
     const searchParams = Object.keys(data)
-      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .map(
+        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+      )
       .join("&");
 
     const response = await fetch(`https://discord.com/api/oauth2/token`, {
