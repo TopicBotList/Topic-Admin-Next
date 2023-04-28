@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Bar from "components/CLUI";
+import Bar from "./CLUI";
 import { FaHome, FaRobot, FaServer, FaHandshake, IoBanSharp, FaSignOutAlt, FaUser, FaCogs, FaGlobeAmericas } from 'react-icons/fa'
-import SidebarItem from "components/SidebarItem";
+import SidebarItem from "./SidebarItem";
 import { useRouter } from "next/router";
 export default function Navbar({children}){
     const router = useRouter()
