@@ -1,7 +1,16 @@
-import { NextApiRequest, NextApiResponse } from "next";
-// we'll fetch all the num of the bots from da api
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const { NextApiRequest, NextApiResponse } = require("next");
+
+module.exports = async function (req, res) {
   const response = await fetch("https://api.topiclist.xyz/bots");
   const data = await response.json();
-  res.status(200).json(data);
+
+  var filteredData = [];
+
+  data.forEach((b) => {
+    if (b.state === 0) {
+      filteredData.push(b);
+    }
+  });
+
+  res.status(200).json(filteredData);
 };
