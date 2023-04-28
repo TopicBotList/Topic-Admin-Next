@@ -1,5 +1,5 @@
 // Import the necessary modules
-const fetch = require("node-fetch");
+import fetch from 'node-fetch';
 
 // Define the handler function for the API endpoint
 async function handler(req, res) {
