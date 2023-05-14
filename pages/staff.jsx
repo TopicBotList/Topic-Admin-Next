@@ -7,7 +7,7 @@ export default function Staff() {
         <div className="flex items-center bg-blue-900/10 p-3">
           <img
             src={
-              "https://cdn.discordapp.com/avatars/787241442770419722/d393ffaa50a963efd137f1032028678f.png?size=1024"
+              "https://cdn.discordapp.com/avatars/787241442770419722/d57d6439f795238f3f58981ac4ab055c.png?size=1024"
             }
             className={"h-[150px] w-[150px] rounded-lg"}
           ></img>
@@ -28,7 +28,7 @@ export default function Staff() {
         <div className="flex items-center bg-blue-900/10 p-3">
           <img
             src={
-              "https://cdn.discordapp.com/avatars/510065483693817867/a_b27090c7931c8e28d91683fe102668cc.gif?size=1024"
+              "https://cdn.discordapp.com/avatars/510065483693817867/a_5b8b978d724408fa66bc880d1ecc8d17.gif?size=1024"
             }
             className={"h-[150px] w-[150px] rounded-lg"}
           ></img>
