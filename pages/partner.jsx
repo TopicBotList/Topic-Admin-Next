@@ -6,7 +6,7 @@ export default function Staff() {
       <div className="w-full flex flex-col py-2 relative">
         <div className="flex items-center bg-blue-900/10 p-2">
           <img
-            src={"https://beta.diswidgets.org/ibl.png"}
+            src={"https://cdn.infinitybots.gg/images/png/Infinity5.png"}
             className={"h-[120px] w-[120px] rounded-lg"}
           />
           <div className="flex flex-col h-[100px] ml-2">
