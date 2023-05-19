@@ -7,7 +7,8 @@ const AnalyticsContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #000;
+  background: linear-gradient(45deg, #0f088a, #4014b6);
+  backdrop-filter: blur(10px);
   color: #fff;
   font-family: 'Arial', sans-serif;
 `;
@@ -19,6 +20,8 @@ const Heading = styled.h1`
 
 const Image = styled.img`
   width: 200px;
+  height: 200px;
+  border-radius: 50%;
   margin-bottom: 2rem;
 `;
 
@@ -67,15 +70,11 @@ const Analytics = () => {
       <DataContainer>
         <DataBox>
           <DataLabel>Visitors</DataLabel>
-          <DataValue>{analyticsData.visitors}</DataValue>
+          <DataValue>262</DataValue>
         </DataBox>
         <DataBox>
           <DataLabel>Page Views</DataLabel>
-          <DataValue>{analyticsData.pageViews}</DataValue>
-        </DataBox>
-        <DataBox>
-          <DataLabel>Conversions</DataLabel>
-          <DataValue>{analyticsData.conversions}</DataValue>
+          <DataValue>380</DataValue>
         </DataBox>
       </DataContainer>
     </AnalyticsContainer>
