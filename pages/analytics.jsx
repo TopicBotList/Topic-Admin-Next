@@ -1,5 +1,5 @@
 import React from 'react';
-import HologramCube from '../components/HologramCube';
+import HologramCube from '../../components/HologramCube';
 
 const HomePage = () => {
   return (
