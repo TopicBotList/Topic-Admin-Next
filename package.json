@@ -25,8 +25,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "next-auth": "4.22.1",
-    "@react-three/fiber": "8.13.0",
-    "three": "0.152.2",
+    "styled-components": "6.0.0-rc.1",
     "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
