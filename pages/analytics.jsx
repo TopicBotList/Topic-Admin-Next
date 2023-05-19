@@ -17,6 +17,11 @@ const Heading = styled.h1`
   margin-bottom: 2rem;
 `;
 
+const Image = styled.img`
+  width: 200px;
+  margin-bottom: 2rem;
+`;
+
 const DataContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -28,7 +33,7 @@ const DataBox = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background-color: #222;
+  background-color: #0f088a;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 `;
@@ -44,27 +49,21 @@ const DataValue = styled.p`
 `;
 
 const Analytics = () => {
-  const [analyticsData, setAnalyticsData] = useState({});
+  const [analyticsData] = useState({
+    visitors: Math.floor(Math.random() * 10000),
+    pageViews: Math.floor(Math.random() * 100000),
+    conversions: Math.floor(Math.random() * 100),
+  });
 
   useEffect(() => {
-    const generateRandomData = () => {
-      const randomData = {
-        visitors: Math.floor(Math.random() * 10000),
-        pageViews: Math.floor(Math.random() * 100000),
-        conversions: Math.floor(Math.random() * 100),
-        revenue: Math.floor(Math.random() * 1000000),
-      };
-      setAnalyticsData(randomData);
-    };
-
-    const interval = setInterval(generateRandomData, 3000);
-
+    const interval = setInterval(() => {}, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <AnalyticsContainer>
-      <Heading>Cyber Analytics</Heading>
+      <Image src="https://cdn.topiclist.xyz/images/png/TopicList5.png" alt="Analytics" />
+      <Heading>Topic Analytics</Heading>
       <DataContainer>
         <DataBox>
           <DataLabel>Visitors</DataLabel>
@@ -77,10 +76,6 @@ const Analytics = () => {
         <DataBox>
           <DataLabel>Conversions</DataLabel>
           <DataValue>{analyticsData.conversions}</DataValue>
-        </DataBox>
-        <DataBox>
-          <DataLabel>Revenue</DataLabel>
-          <DataValue>${analyticsData.revenue}</DataValue>
         </DataBox>
       </DataContainer>
     </AnalyticsContainer>
