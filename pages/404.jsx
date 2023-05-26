@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import styles from '../error.module.css';
+import styles from '../styles/error.module.css';
 
 export default function ErrorPage() {
   const router = useRouter();
