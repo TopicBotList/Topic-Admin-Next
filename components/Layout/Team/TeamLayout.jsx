@@ -22,7 +22,9 @@ export default function PartnerCard({
   return (
     <div
       className={`rounded-lg p-4 shadow-md hover:shadow-lg ${
-        isCustomBackground ? customBackground : "bg-gradient-to-r from-cyber-cyan to-cyber-purple"
+        isCustomBackground
+          ? customBackground
+          : "bg-gradient-to-r from-cyber-cyan to-cyber-purple"
       }`}
       onClick={handleClick}
     >
@@ -64,7 +66,9 @@ export default function PartnerCard({
             animation: "glowAnimation 2s ease-in-out infinite",
           }}
         >
-          <i className={`fas fa-external-link-alt text-cyber-cyan ${link1Icon}`} />{" "}
+          <i
+            className={`fas fa-external-link-alt text-cyber-cyan ${link1Icon}`}
+          />{" "}
           {link1Title}
         </a>
         <a
@@ -77,7 +81,9 @@ export default function PartnerCard({
             animation: "glowAnimation 2s ease-in-out infinite",
           }}
         >
-          <i className={`fas fa-external-link-alt text-cyber-cyan ${link2Icon}`} />{" "}
+          <i
+            className={`fas fa-external-link-alt text-cyber-cyan ${link2Icon}`}
+          />{" "}
           {link2Title}
         </a>
       </div>
@@ -115,7 +121,11 @@ export default function PartnerCard({
         }
 
         .bg-gradient-to-r {
-          background: linear-gradient(to right, from-cyber-cyan, to-cyber-purple);
+          background: linear-gradient(
+            to right,
+            from-cyber-cyan,
+            to-cyber-purple
+          );
         }
 
         .text-cyber-cyan {
