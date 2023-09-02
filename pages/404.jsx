@@ -1,31 +1,50 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default function ErrorPage() {
-  const router = useRouter();
-  return (
-    <div className=" bg-transparent h-full w-full flex flex-col justify-center items-center">
-      <h1 className="text-white text-6xl font-bold">404</h1>
-      <p className="text-white/70 text-lg font-semibold mt-3">
-        This page might have been moved, deleted, or never existed.
-      </p>
-      <div className="flex mt-6 items-center">
-        <button
-          onClick={() => {
-            router.replace("/");
-          }}
-          className="rounded-lg text-white bg-blue-600 py-3 px-4 min-w-[100px]"
-        >
-          Home
-        </button>
-        <button
-          onClick={() => {
-            router.back();
-          }}
-          className="rounded-lg text-white bg-zinc-900 py-3 px-4 min-w-[100px] ml-3 "
-        >
-          Back
-        </button>
-      </div>
-    </div>
-  );
+export default function notfound() {
+    const router = useRouter();
+
+    return (
+        <div className="p-5 lg:p-10 py-[6rem] lg:py-[8rem] rounded-lg min-h-screen">
+            <div className="flex justify-center w-full">
+                <div className="px-6 lg:px-36 max-w-4xl">
+                    <div className="flex flex-col mt-20 justify-center text-center w-full">
+                        <Image
+                            alt="404"
+                            src="https://cdn.topiclist.xyz/images/error/404.png"
+                            width="500"
+                            height="200"
+                        ></Image>
+                        <p className="mt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-200 from-gray-400 font-semibold"></p>
+                        <p className="mt-1 text-xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-400 from-gray-600 dark:to-gray-200 dark:from-gray-400 font-semibold">
+                            We couldn't find the page you were looking for.
+                        </p>
+                        <div className="mt-10">
+                            <div className="w-full h-1 my-3 bg-sky-900 rounded-xl"></div>
+                            <div
+                                onClick={() => {
+                                    router.back();
+                                }}
+                                className="w-full hover:bg-zinc-500/5 px-6 my-2 hover:px-6 rounded-lg transition-all duration-200 cursor-pointer border border-black/5 dark:border-white/5 py-5 flex justify-between items-center"
+                            >
+                                <div className="flex gap-x-4">
+                                    <i className="flex items-center bg-sky-500/10 rounded-lg text-xl w-12 h-12 text-sky-600 px-3 py-2 fas fa-arrow-left"></i>
+                                    <div className="text-left mr-3">
+                                        <p className="text-lg text-sky-500 dark:text-sky-200">
+                                            Go Back
+                                        </p>
+                                        <p className="text-sm text-white dark:text-white/50">
+                                            Back to the page you were redirected
+                                            to here
+                                        </p>
+                                    </div>
+                                </div>
+                                <i className="px-2 fas fa-chevron-right text-zinc-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
