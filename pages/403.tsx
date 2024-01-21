@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-export default function notfound() {
+export default function Render() {
   const router = useRouter();
 
   return (
@@ -10,21 +10,19 @@ export default function notfound() {
         <div className="px-6 lg:px-36 max-w-4xl">
           <div className="flex flex-col mt-20 justify-center text-center w-full">
             <Image
-              alt="404"
-              src="https://cdn.topiclist.xyz/images/error/404.png"
+              alt="403"
+              src="https://cdn.topiclist.xyz/images/error/403.svg"
               width="500"
               height="200"
             ></Image>
             <p className="mt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-200 from-gray-400 font-semibold"></p>
             <p className="mt-1 text-xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-400 from-gray-600 dark:to-gray-200 dark:from-gray-400 font-semibold">
-              We couldn't find the page you were looking for.
+              Access to this page is forbidden.
             </p>
             <div className="mt-10">
-              <div className="w-full h-1 my-3 bg-sky-900 rounded-xl"></div>
+              <div className="w-full h-1 my-3 bg-zinc-500/0 rounded-xl"></div>
               <div
-                onClick={() => {
-                  router.back();
-                }}
+                onClick={() => router.back()}
                 className="w-full hover:bg-zinc-500/5 px-6 my-2 hover:px-6 rounded-lg transition-all duration-200 cursor-pointer border border-black/5 dark:border-white/5 py-5 flex justify-between items-center"
               >
                 <div className="flex gap-x-4">
@@ -33,7 +31,7 @@ export default function notfound() {
                     <p className="text-lg text-sky-500 dark:text-sky-200">
                       Go Back
                     </p>
-                    <p className="text-sm text-white dark:text-white/50">
+                    <p className="text-sm text-black/50 dark:text-white/50">
                       Back to the page you were redirected to here
                     </p>
                   </div>

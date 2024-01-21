@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import Bar from "./CLUI";
 import {
@@ -5,16 +6,20 @@ import {
   FaRobot,
   FaServer,
   FaHandshake,
-  IoBanSharp,
-  FaSignOutAlt,
   FaUser,
   FaCogs,
   FaGlobeAmericas,
 } from "react-icons/fa";
 import SidebarItem from "./SidebarItem";
 import { useRouter } from "next/router";
-export default function Navbar({ children }) {
+
+interface NavbarProps {
+  children: React.ReactNode;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ children }) => {
   const router = useRouter();
+
   return (
     <>
       <div className="z-[3] fixed top-0 h-[80px] flex items-center">
@@ -24,8 +29,9 @@ export default function Navbar({ children }) {
         <div className="h-[90px] flex items-center">
           <Image
             src="https://cdn.topiclist.xyz/images/png/TopicList5.png"
-            width="50px"
-            height="50px"
+            width={50}
+            height={50}
+            alt="TopicList Logo"
             className="rounded-lg"
           />
           <p className="text-3xl font-bold text-white ml-3">TopicList</p>
@@ -81,11 +87,13 @@ export default function Navbar({ children }) {
             height: "calc(100vh - 180px)",
             background: "rgb(255, 255, 255, 0.0)",
           }}
-          className=" rounded-lg ml-[300px] border-2 border-blue-800 overflow-y-hidden oveflow-x-hidden"
+          className=" rounded-lg ml-[300px] border-2 border-blue-800 overflow-y-hidden overflow-x-hidden"
         >
           {children}
         </div>
       </div>
     </>
   );
-}
+};
+
+export default Navbar;
