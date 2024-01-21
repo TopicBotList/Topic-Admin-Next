@@ -1,10 +1,10 @@
-import React from 'react';
-import { AppProps } from 'next/app';
-import NextNProgress from 'nextjs-progressbar';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-import Navbar from '../components/Navbar';
-import '../styles/globals.css';
+import React from "react";
+import { AppProps } from "next/app";
+import NextNProgress from "nextjs-progressbar";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router";
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <div className="h-full w-full overflow-hidden">
           <AnimatePresence exitBeforeEnter={false} initial={false}>
             <motion.div
-              transition={{ type: 'linear', duration: 0.3 }}
+              transition={{ type: "linear", duration: 0.3 }}
               className="h-full w-full overflow-auto"
               key={router.pathname}
               animate={{ y: 0, opacity: 1 }}

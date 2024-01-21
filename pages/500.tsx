@@ -1,9 +1,5 @@
 import { Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
-import {
-  AddRounded,
-  HomeOutlined,
-  LoginRounded
-} from "@mui/icons-material";
+import { AddRounded, HomeOutlined, LoginRounded } from "@mui/icons-material";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 
@@ -43,7 +39,7 @@ export default function NotFound() {
               <Button
                 onClick={() =>
                   router.push(
-                    `${process.env.apiUrl}/login?branch=${process.env.NEXT_PUBLIC_BRANCH}`
+                    `${process.env.apiUrl}/login?branch=${process.env.NEXT_PUBLIC_BRANCH}`,
                   )
                 }
                 leftIcon={<LoginRounded />}

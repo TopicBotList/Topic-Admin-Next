@@ -1,10 +1,5 @@
-import React from 'react';
-import {
-  FaCheckCircle,
-  FaClipboard,
-  FaServer,
-  FaUser,
-} from 'react-icons/fa';
+import React from "react";
+import { FaCheckCircle, FaClipboard, FaServer, FaUser } from "react-icons/fa";
 
 const App: React.FC = () => {
   return (
@@ -27,7 +22,9 @@ const App: React.FC = () => {
               <FaCheckCircle />
             </div>
             <div className="ml-3 flex flex-col">
-              <p className="text-sm font-semibold text-white/50">Approved Bots</p>
+              <p className="text-sm font-semibold text-white/50">
+                Approved Bots
+              </p>
               <p className="text-lg font-semibold text-white">42</p>
             </div>
           </div>
@@ -57,13 +54,17 @@ const App: React.FC = () => {
             </p>
             <div className="h-[200px] py-2 overflow-auto">
               <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
-                <p className="font-semibold text-lg text-white/80">Partners Update</p>
+                <p className="font-semibold text-lg text-white/80">
+                  Partners Update
+                </p>
                 <p className="font-semibold ml-4 text-white/60">
                   All the partner will be managed from the Admin Panel.
                 </p>
               </div>
               <div className="flex items-center px-4 h-[60px] w-full hover:bg-blue-800/20">
-                <p className="font-semibold text-lg text-white/80">First Announcement</p>
+                <p className="font-semibold text-lg text-white/80">
+                  First Announcement
+                </p>
                 <p className="font-semibold ml-4 text-white/60">
                   TopicAdmin Made By RanveerSoni.
                 </p>
