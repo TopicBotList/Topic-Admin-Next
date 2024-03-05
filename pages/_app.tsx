@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextNProgress options={{ showSpinner: false }} />
       <Head>
-        <title>TopicList - Admin</title>
+        <title>TopicList - Administrative Panel</title>
         <link
           rel="icon"
           href="https://cdn.topiclist.xyz/images/png/TopicList5.png"
