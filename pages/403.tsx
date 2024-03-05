@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { FaArrowLeft } from "react-icons/fa";
 
-
 export default function Render() {
   const router = useRouter();
 
@@ -28,7 +27,7 @@ export default function Render() {
                 className="w-full hover:bg-zinc-500/5 px-6 my-2 hover:px-6 rounded-lg transition-all duration-200 cursor-pointer border border-black/5 dark:border-white/5 py-5 flex justify-between items-center"
               >
                 <div className="flex gap-x-4">
-                <FaArrowLeft />
+                  <FaArrowLeft />
                   <div className="text-left mr-3">
                     <p className="text-lg text-sky-500 dark:text-sky-200">
                       Go Back
