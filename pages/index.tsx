@@ -1,7 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheckCircle, FaClipboard, FaServer, FaUser } from "react-icons/fa";
+import $ from "jquery";
 
 const App: React.FC = () => {
+  const [serversCount, setServersCount] = useState<number>(0);
+  const [botsCount, setBotsCount] = useState<number>(0);
+  const [usersCount, setUsersCount] = useState<number>(0);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+        const responses = await Promise.all([
+          fetch(`${process.env.NEXT_PUBLIC_API_URL}/servnum`),
+          fetch(`${process.env.NEXT_PUBLIC_API_URL}/botnum`),
+          fetch(`${process.env.NEXT_PUBLIC_API_URL}/usernum`)
+        ]);
+
+        const data = await Promise.all(responses.map(res => res.json()));
+
+        setServersCount(data[0].total_servers);
+        setBotsCount(data[1].total_bots);
+        setUsersCount(data[2].total_user);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="flex flex-col w-full h-full">
@@ -25,7 +53,7 @@ const App: React.FC = () => {
               <p className="text-sm font-semibold text-white/50">
                 Approved Bots
               </p>
-              <p className="text-lg font-semibold text-white">42</p>
+              <p className="text-lg font-semibold text-white">{botsCount}</p>
             </div>
           </div>
           <div className="mx-2 h-[80px] w-[200px] rounded-lg bg-blue-800/10 flex items-center px-3">
@@ -34,7 +62,7 @@ const App: React.FC = () => {
             </div>
             <div className="ml-3 flex flex-col">
               <p className="text-sm font-semibold text-white/50">Servers</p>
-              <p className="text-lg font-semibold text-white">6</p>
+              <p className="text-lg font-semibold text-white">{serversCount}</p>
             </div>
           </div>
           <div className="mx-2 h-[80px] w-[200px] rounded-lg bg-blue-800/10 flex items-center px-3">
@@ -43,7 +71,7 @@ const App: React.FC = () => {
             </div>
             <div className="ml-3 flex flex-col">
               <p className="text-sm font-semibold text-white/50">Users</p>
-              <p className="text-lg font-semibold text-white">126</p>
+              <p className="text-lg font-semibold text-white">{usersCount}</p>
             </div>
           </div>
         </div>

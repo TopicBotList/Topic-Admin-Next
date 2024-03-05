@@ -24,7 +24,7 @@ Make sure your Node version is above 20. Set up the .env right to get the best r
 
 ## Env Setup
 - Rename `.env.template` to `.env`.
-- Provide the required parameters such as `apiUrl` should have the API URL.
+- Provide the required parameters such as `NEXT_PUBLIC_API_URL` should have the API URL.
 
 ## Contributors
 <a href="https://github.com/TopicBotList/Topic-Admin-Next/graphs/contributors">
