@@ -66,9 +66,6 @@ export default function Render({ abots }) {
   return (
     <motion.div variants={zcontainer} initial="hidden" animate="show">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-24 mt-5">
-        <motion.div variants={zitem}>
-          {/* Your advertising space component */}
-        </motion.div>
         {searchResults.map((bot) => (
           <motion.div variants={zitem}>
             <BotCard
