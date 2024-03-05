@@ -36,7 +36,7 @@ const App: React.FC = () => {
         const responses = await Promise.all([
           fetch(`${apiUrl}/servnum`),
           fetch(`${apiUrl}/botnum`),
-          fetch(`${apiUrl}/usernum`)
+          fetch(`${apiUrl}/usernum`),
         ]);
 
         const data = await Promise.all(responses.map((res) => res.json()));
@@ -57,10 +57,22 @@ const App: React.FC = () => {
     <>
       <div className="flex flex-col w-full h-full">
         <div className="flex items-center justify-center p-3">
-          <StatCard icon={<AiOutlineRobot />} label="Unapproved Bots" count={0} />
-          <StatCard icon={<FaCheckCircle />} label="Approved Bots" count={botsCount} />
+          <StatCard
+            icon={<AiOutlineRobot />}
+            label="Unapproved Bots"
+            count={0}
+          />
+          <StatCard
+            icon={<FaCheckCircle />}
+            label="Approved Bots"
+            count={botsCount}
+          />
           <StatCard icon={<FaServer />} label="Servers" count={serversCount} />
-          <StatCard icon={<AiOutlineUsergroupAdd />} label="Users" count={usersCount} />
+          <StatCard
+            icon={<AiOutlineUsergroupAdd />}
+            label="Users"
+            count={usersCount}
+          />
         </div>
         <div className="w-full flex items-center flex-col px-8 py-2">
           <div className="w-full overflow-hidden rounded-lg bg-blue-800/10">
@@ -68,8 +80,14 @@ const App: React.FC = () => {
               Today&apos;s announcements
             </p>
             <div className="h-[200px] py-2 overflow-auto">
-              <Announcement title="Partners Update" content="All the partner will be managed from the Admin Panel." />
-              <Announcement title="First Announcement" content="TopicAdmin Made By RanveerSoni." />
+              <Announcement
+                title="Partners Update"
+                content="All the partner will be managed from the Admin Panel."
+              />
+              <Announcement
+                title="First Announcement"
+                content="TopicAdmin Made By RanveerSoni."
+              />
             </div>
           </div>
         </div>
