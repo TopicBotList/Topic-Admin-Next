@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const TeamFetch = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const response = await fetch(
-      "https://api.topiclist.xyz/private/team" //not up yet. Under construction.
+      "https://api.topiclist.xyz/private/team", //not up yet. Under construction.
     );
     const data = await response.json();
     res.status(200).json(data);

@@ -4,7 +4,7 @@ import NextNProgress from "nextjs-progressbar";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import Navbar from "../components/Static/Navbar";
-import Head from 'next/head';
+import Head from "next/head";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,10 +14,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextNProgress options={{ showSpinner: false }} />
       <Head>
-                <title>TopicList - Admin</title>
-                <link rel="icon" href="https://cdn.topiclist.xyz/images/png/TopicList5.png" />
-                <script>{`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`}</script>
-            </Head>
+        <title>TopicList - Admin</title>
+        <link
+          rel="icon"
+          href="https://cdn.topiclist.xyz/images/png/TopicList5.png"
+        />
+        <script>{`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`}</script>
+      </Head>
       <Navbar>
         <div className="h-full w-full overflow-hidden">
           <AnimatePresence>

@@ -5,7 +5,7 @@ import BotCard from "../components/cards/BotCard";
 import { motion } from "framer-motion";
 import $ from "jquery";
 
-export default function Render({ abots }) { 
+export default function Render({ abots }) {
   const router = useRouter();
 
   const zcontainer = {
@@ -31,14 +31,17 @@ export default function Render({ abots }) {
     const input = document.getElementById("searchInput") as HTMLInputElement; // Cast to HTMLInputElement
     if (input) {
       const inputValue = input.value.toLowerCase(); // Get input value
-      const results = abots.filter(bot => {
+      const results = abots.filter((bot) => {
         if (bot.approved) {
           const botname = bot.name.toLowerCase().split("");
           let howmuch = 0;
-          botname.forEach(item =>
-            inputValue.includes(item) ? (howmuch += 1) : null
+          botname.forEach((item) =>
+            inputValue.includes(item) ? (howmuch += 1) : null,
           );
-          if (howmuch / botname.length >= 0.5 && howmuch / botname.length <= 2) {
+          if (
+            howmuch / botname.length >= 0.5 &&
+            howmuch / botname.length <= 2
+          ) {
             return true;
           } else {
             const botDesc = bot.shortdesc
@@ -46,10 +49,12 @@ export default function Render({ abots }) {
               .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
               .split(" ");
             let match = 0;
-            botDesc.forEach(item =>
-              inputValue.includes(item) ? (match += 1) : false
+            botDesc.forEach((item) =>
+              inputValue.includes(item) ? (match += 1) : false,
             );
-            return match / botDesc.length >= 0.25 && match / botDesc.length <= 2;
+            return (
+              match / botDesc.length >= 0.25 && match / botDesc.length <= 2
+            );
           }
         }
         return false;
@@ -57,7 +62,6 @@ export default function Render({ abots }) {
       setSearchResults(results); // Update searchResults state
     }
   }, [abots]);
-  
 
   return (
     <motion.div variants={zcontainer} initial="hidden" animate="show">
@@ -65,7 +69,7 @@ export default function Render({ abots }) {
         <motion.div variants={zitem}>
           {/* Your advertising space component */}
         </motion.div>
-        {searchResults.map(bot => (
+        {searchResults.map((bot) => (
           <motion.div variants={zitem}>
             <BotCard
               name={bot.name}
@@ -85,8 +89,8 @@ export default function Render({ abots }) {
 export async function getServerSideProps(context) {
   const apiUrl = process.env.apiUrl;
   const data = await fetch(`${process.env.apiUrl}/find_bots?limit=8`)
-    .then(res => res.json())
-    .catch(err => {
+    .then((res) => res.json())
+    .catch((err) => {
       console.log(`[Error]: ${err}`);
       return {
         bots: [],
