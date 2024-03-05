@@ -44,19 +44,19 @@ const BotCard = (props) => {
                 decoding="async"
                 className="rounded-full w-full h-full"
                 sizes="100vw"
-                width={"0px"}
-                height="0px"
+                width={"1"}
+                height="1"
                 src={props.avatar}
                 style={{
                   position: "absolute",
-                  inset: "0px",
+                  inset: "1",
                   boxSizing: "border-box",
-                  padding: "0px",
+                  padding: "1",
                   border: "none",
                   margin: "auto",
                   display: "block",
-                  width: "0px",
-                  height: "0px",
+                  width: "1",
+                  height: "1",
                   minWidth: "100%",
                   maxWidth: "100%",
                   minHeight: "100%",
