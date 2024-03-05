@@ -14,10 +14,10 @@ const App: React.FC = () => {
         const responses = await Promise.all([
           fetch(`${process.env.NEXT_PUBLIC_API_URL}/servnum`),
           fetch(`${process.env.NEXT_PUBLIC_API_URL}/botnum`),
-          fetch(`${process.env.NEXT_PUBLIC_API_URL}/usernum`)
+          fetch(`${process.env.NEXT_PUBLIC_API_URL}/usernum`),
         ]);
 
-        const data = await Promise.all(responses.map(res => res.json()));
+        const data = await Promise.all(responses.map((res) => res.json()));
 
         setServersCount(data[0].total_servers);
         setBotsCount(data[1].total_bots);
