@@ -19,7 +19,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "https://k02hrtapiv5j.topiclist.xyz/:path*",
+        source: "https://api.topiclist.xyz/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },

@@ -3,7 +3,8 @@ import { AppProps } from "next/app";
 import NextNProgress from "nextjs-progressbar";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Static/Navbar";
+import Head from 'next/head';
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -11,20 +12,21 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <div className="h-screen w-screen flex items-center justify-center fixed top-0 left-0 z-[-1]">
-        <div className="gradient-wrapper" />
-      </div>
       <NextNProgress options={{ showSpinner: false }} />
+      <Head>
+                <title>TopicList - Admin</title>
+                <link rel="icon" href="https://cdn.topiclist.xyz/images/png/TopicList5.png" />
+                <script>{`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`}</script>
+            </Head>
       <Navbar>
         <div className="h-full w-full overflow-hidden">
-          <AnimatePresence exitBeforeEnter={false} initial={false}>
+          <AnimatePresence>
             <motion.div
               transition={{ type: "linear", duration: 0.3 }}
               className="h-full w-full overflow-auto"
               key={router.pathname}
               animate={{ y: 0, opacity: 1 }}
               initial={{ y: 50, opacity: 0 }}
-              exit={{ y: 50, opacity: 0 }}
             >
               <Component {...pageProps} />
             </motion.div>

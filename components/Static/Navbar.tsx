@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Bar from "./CLUI";
+import Bar from "../CLUI";
 import {
   FaHome,
   FaRobot,
@@ -10,7 +10,7 @@ import {
   FaCogs,
   FaGlobeAmericas,
 } from "react-icons/fa";
-import SidebarItem from "./SidebarItem";
+import SidebarItem from "../SidebarItem";
 import { useRouter } from "next/router";
 
 interface NavbarProps {
@@ -59,8 +59,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             icon={<FaServer />}
           />
           <SidebarItem
-            onClick={() => router.push("/staff")}
-            text={"Staff"}
+            onClick={() => router.push("/team")}
+            text={"Team"}
             icon={<FaUser />}
           />
           <SidebarItem
@@ -69,7 +69,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             icon={<FaHandshake />}
           />
           <SidebarItem
-            onClick={() => router.push("/status")}
+            onClick={() => router.push("https://status.topiclist.xyz")}
             text={"Status"}
             icon={<FaCogs />}
           />

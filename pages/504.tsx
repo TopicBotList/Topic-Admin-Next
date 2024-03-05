@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React from "react";
+import { FaArrowLeft } from "react-icons/fa";
 
 export default function Render() {
   const router = useRouter();
@@ -18,12 +18,14 @@ export default function Render() {
             </p>
             <div className="mt-10">
               <div className="w-full h-1 my-3 bg-zinc-500/0 rounded-xl"></div>
-              <div
-                onClick={() => router.back()}
+              <a
+                href="https://status.topiclist.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full hover:bg-zinc-500/5 px-6 my-2 hover:px-6 rounded-lg transition-all duration-200 cursor-pointer border border-black/5 dark:border-white/5 py-5 flex justify-between items-center"
               >
                 <div className="flex gap-x-4">
-                  <i className="flex items-center bg-sky-500/10 rounded-lg text-xl w-12 h-12 text-sky-600 px-3 py-2 fas fa-arrow-left"></i>
+                  <FaArrowLeft />
                   <div className="text-left mr-3">
                     <p className="text-lg text-sky-500 dark:text-sky-200">
                       Status
@@ -34,7 +36,7 @@ export default function Render() {
                   </div>
                 </div>
                 <i className="px-2 fas fa-chevron-right text-zinc-500"></i>
-              </div>
+              </a>
             </div>
           </div>
         </div>

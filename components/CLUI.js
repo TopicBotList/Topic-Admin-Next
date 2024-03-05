@@ -44,10 +44,10 @@ export default function Bar() {
               update({ value: " ", index: 6 });
             },
           },
-          "> staff": {
-            description: "List Of Staff Working For TopicList",
+          "> Team": {
+            description: "Get to know the team working on TopicList!",
             run: () => {
-              router.push("/staff");
+              router.push("/team");
               setValue("");
               setSearch(false);
               update({ value: " ", index: 6 });
@@ -65,7 +65,7 @@ export default function Bar() {
           "> Status": {
             description: "Status Page",
             run: () => {
-              router.push("/status");
+              router.push("https://status.topiclist.xyz!");
               setValue("");
               setSearch(false);
               update({ value: " ", index: 6 });
