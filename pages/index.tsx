@@ -59,7 +59,7 @@ const App: React.FC = () => {
   return (
     <>
       <div className="flex flex-col w-full h-full">
-        <div className="flex items-center justify-center p-3">
+        <div className="flex flex-col md:flex-row items-center justify-center p-3">
           <StatCard
             icon={<AiOutlineRobot />}
             label="Unapproved Bots"
@@ -78,9 +78,9 @@ const App: React.FC = () => {
           />
           <StatCard icon={<FaUserCog />} label="Staff" count={staffCount} />
         </div>
-        <div className="w-full flex items-center flex-col px-8 py-2">
+        <div className="w-full flex items-center flex-col px-4 py-2 mt-4">
           <div className="w-full overflow-hidden rounded-lg bg-blue-800/10">
-            <p className="py-4 px-4 bg-blue-800/10 font-semibold text-lg">
+            <p className="py-4 px-4 bg-blue-800/10 font-semibold text-lg text-center">
               Today&apos;s announcements
             </p>
             <div className="h-[200px] py-2 overflow-auto">
