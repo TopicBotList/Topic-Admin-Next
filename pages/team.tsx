@@ -41,7 +41,7 @@ const Profile = () => {
             src={profile.Image}
             className="rounded-lg"
             width={150}
-      height={150}
+            height={150}
             alt="Profile Picture"
           />
           <div className="ml-3">
