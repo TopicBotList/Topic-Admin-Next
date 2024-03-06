@@ -139,7 +139,7 @@ export default function Bar() {
         update({ value: value, index: 6 });
       }
     }
-  }, [value, rootCommand.commands, update]);
+  }, [value]);
   return (
     <div className="">
       {search && (
@@ -159,7 +159,6 @@ export default function Bar() {
           {sections.map((section, index) => {
             if (index + 1 != sections.length) {
               return (
-                // eslint-disable-next-line react/jsx-key
                 <div
                   onClick={() => {
                     var newsect = sections;

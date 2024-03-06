@@ -19,7 +19,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="icon"
           href="https://cdn.topiclist.xyz/images/png/TopicList5.png"
         />
-        <script>{`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`}</script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`
+          }}
+        />
       </Head>
       <Navbar>
         <div className="h-full w-full overflow-hidden">
