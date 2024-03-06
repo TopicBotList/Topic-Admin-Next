@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`
+              gtag('js', new Date());gtag('config', 'G-EKRN2RFJ67');`,
           }}
         />
       </Head>
