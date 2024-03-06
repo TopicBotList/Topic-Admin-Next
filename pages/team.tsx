@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaCrown, FaUserCog } from "react-icons/fa";
+import Image from "next/image";
 
 const Profile = () => {
   const [profiles, setProfiles] = useState([]);
@@ -15,7 +16,7 @@ const Profile = () => {
         const processedProfiles = data.map((profile) => ({
           username: profile.name,
           shortBio: profile.bio,
-          image: profile.avatar,
+          Image: profile.avatar,
         }));
 
         setProfiles(processedProfiles);
@@ -36,9 +37,11 @@ const Profile = () => {
           key={index}
           className="flex items-center bg-blue-900/10 p-3 rounded-lg mb-4"
         >
-          <img
-            src={profile.image}
-            className="h-[150px] w-[150px] rounded-lg"
+          <Image
+            src={profile.Image}
+            className="rounded-lg"
+            width={150}
+      height={150}
             alt="Profile Picture"
           />
           <div className="ml-3">

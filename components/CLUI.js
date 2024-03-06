@@ -139,7 +139,7 @@ export default function Bar() {
         update({ value: value, index: 6 });
       }
     }
-  }, [value]);
+  }, [value, rootCommand.commands, update]);
   return (
     <div className="">
       {search && (
@@ -156,9 +156,11 @@ export default function Bar() {
           }}
           className="h-[55px] flex items-center bg-black/90 border-2 border-blue-800 z-[3] w-[500px] rounded-lg px-4 text-white"
         >
+          
           {sections.map((section, index) => {
             if (index + 1 != sections.length) {
               return (
+                // eslint-disable-next-line react/jsx-key
                 <div
                   onClick={() => {
                     var newsect = sections;

@@ -1,8 +1,7 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { FaArrowLeft } from "react-icons/fa";
 
-export default function notfound() {
+const NotFound = () => {
   const router = useRouter();
 
   return (
@@ -13,7 +12,7 @@ export default function notfound() {
             <p style={{ fontSize: "70px" }}>404</p>
             <p className="mt-2 text-2xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-200 from-gray-400 font-semibold"></p>
             <p className="mt-1 text-xl text-transparent bg-clip-text bg-gradient-to-bl to-gray-400 from-gray-600 dark:to-gray-200 dark:from-gray-400 font-semibold">
-              We couldn't find the page you were looking for.
+              We couldn&apos;t find the page you were looking for.
             </p>
             <div className="mt-10">
               <div className="w-full h-1 my-3 bg-sky-900 rounded-xl"></div>
@@ -42,4 +41,6 @@ export default function notfound() {
       </div>
     </div>
   );
-}
+};
+
+export default NotFound;

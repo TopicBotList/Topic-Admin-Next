@@ -42,7 +42,7 @@ export default function Callback() {
         </span>
       </div>
       <p style={{ color: "whiteAlpha.800", textAlign: "center" }}>
-        We're destroying your token. Please don't leave this page.
+        We&apos;re destroying your token. Please don&apos;t leave this page.
       </p>
     </div>
   );
