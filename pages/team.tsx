@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaCrown, FaUserCog } from "react-icons/fa";
 import Image from "next/image";
 
-const Profile = () => {
+const Team = () => {
   const [profiles, setProfiles] = useState([]);
   const [error, setError] = useState(null);
 
@@ -56,4 +56,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Team;
