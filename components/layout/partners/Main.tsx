@@ -11,8 +11,9 @@ interface Partner {
 }
 
 export default function Main(): JSX.Element {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const { data: _Partner } = swr(
-    "https://cdn.topiclist.xyz/images/test/partner.json",
+    `${apiUrl}/partners/@all`,
     600000,
   ) as { data?: Partner[] };
   const Partner = _Partner || [];

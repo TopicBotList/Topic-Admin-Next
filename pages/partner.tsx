@@ -1,4 +1,4 @@
-import Main from "../components/layout/partners/Main";
+import Partner from "../components/layout/partners/Main";
 
 export default function Partners() {
   return (
@@ -20,7 +20,7 @@ export default function Partners() {
             <div className="mb-14" />
           </div>
         </div>
-        <Main />
+        <Partner />
       </div>
     </>
   );
