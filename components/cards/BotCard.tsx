@@ -77,7 +77,11 @@ const BotCard = (props) => {
         </p>
         <div className="sm:flex space-y-2 sm:space-y-0 justify-between w-full gap-x-4 text-center mt-5">
           <div
-            onClick={() => router.push("https://beta.topiclist.xyz/bot/" + props.id.toString())}
+            onClick={() =>
+              router.push(
+                "https://beta.topiclist.xyz/bot/" + props.id.toString(),
+              )
+            }
             className="w-full bg-sky-900/10 hover:bg-sky-900/50 hover:shadow-xl transition-all duration-200 cursor-pointer px-4 py-2 rounded-lg"
           >
             View

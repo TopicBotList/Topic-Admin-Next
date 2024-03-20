@@ -40,7 +40,7 @@ const App: React.FC = () => {
           fetch(`${apiUrl}/botnum`),
           fetch(`${apiUrl}/usernum`),
           fetch(`${apiUrl}/staffnum`),
-          fetch(`${apiUrl}/unapprovedbotsnum`)
+          fetch(`${apiUrl}/unapprovedbotsnum`),
         ]);
 
         const data = await Promise.all(responses.map((res) => res.json()));
