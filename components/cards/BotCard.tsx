@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { FaSignal, FaExclamationCircle } from "react-icons/fa";
 
 const BotCard = (props) => {
   const router = useRouter();
@@ -40,7 +41,7 @@ const BotCard = (props) => {
               }}
             >
               <Image
-                alt="cdn.topiclist.xyz"
+                alt="topiclist.xyz"
                 decoding="async"
                 className="rounded-full w-full h-full"
                 sizes="100vw"
@@ -49,14 +50,14 @@ const BotCard = (props) => {
                 src={props.avatar}
                 style={{
                   position: "absolute",
-                  inset: "1",
+                  inset: "0px",
                   boxSizing: "border-box",
-                  padding: "1",
+                  padding: "0px",
                   border: "none",
                   margin: "auto",
                   display: "block",
-                  width: "1",
-                  height: "1",
+                  width: "0px",
+                  height: "0px",
                   minWidth: "100%",
                   maxWidth: "100%",
                   minHeight: "100%",
@@ -76,11 +77,7 @@ const BotCard = (props) => {
         </p>
         <div className="sm:flex space-y-2 sm:space-y-0 justify-between w-full gap-x-4 text-center mt-5">
           <div
-            onClick={() =>
-              router.push(
-                "https://beta.topiclist.xyz/bot/" + props.id.toString(),
-              )
-            }
+            onClick={() => router.push("https://beta.topiclist.xyz/bot/" + props.id.toString())}
             className="w-full bg-sky-900/10 hover:bg-sky-900/50 hover:shadow-xl transition-all duration-200 cursor-pointer px-4 py-2 rounded-lg"
           >
             View
@@ -90,9 +87,25 @@ const BotCard = (props) => {
           </div>
         </div>
       </div>
+      {props.nsfw && (
+        <div
+          className="absolute flex items-center top-2 right-2 bg-sky-500/10 px-3 py-1 rounded-lg text-sm"
+          style={{ marginRight: "120px" }}
+        >
+          <FaExclamationCircle className="mr-2" />
+          NSFW
+        </div>
+      )}
       <div className="absolute flex items-center top-2 right-2 bg-sky-500/10 px-3 py-1 rounded-lg text-sm">
         <i className="fa fa-chevron-up mr-2"></i>
         {props.votes}
+      </div>
+      <div
+        className="absolute flex items-center top-2 right-2 bg-sky-500/10 px-3 py-1 rounded-lg text-sm"
+        style={{ marginRight: "55px" }}
+      >
+        <FaSignal className="mr-2" />
+        {props.serverCount}
       </div>
     </div>
   );

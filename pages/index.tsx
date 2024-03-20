@@ -28,6 +28,7 @@ const App: React.FC = () => {
   const [botsCount, setBotsCount] = useState<number>(0);
   const [usersCount, setUsersCount] = useState<number>(0);
   const [staffCount, setStaffCount] = useState<number>(0);
+  const [unapprovedbotsnum, setunapprovedbotsnum] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           fetch(`${apiUrl}/botnum`),
           fetch(`${apiUrl}/usernum`),
           fetch(`${apiUrl}/staffnum`),
+          fetch(`${apiUrl}/unapprovedbotsnum`)
         ]);
 
         const data = await Promise.all(responses.map((res) => res.json()));
@@ -47,6 +49,7 @@ const App: React.FC = () => {
         setBotsCount(data[1].total_bots);
         setUsersCount(data[2].total_user);
         setStaffCount(data[3].total_staff);
+        setunapprovedbotsnum(data[0].total_staff);
       } catch (error) {
         console.error("Error fetching data:", error);
         setError("Failed to fetch data");
@@ -63,7 +66,7 @@ const App: React.FC = () => {
           <StatCard
             icon={<AiOutlineRobot />}
             label="Unapproved Bots"
-            count={0}
+            count={unapprovedbotsnum}
           />
           <StatCard
             icon={<FaCheckCircle />}

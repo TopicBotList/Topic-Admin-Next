@@ -11,6 +11,8 @@ interface Bot {
   avatar: string;
   banner: string;
   shortdesc: string;
+  nsfw: string;
+  serverCount: string;
   approved: boolean;
 }
 
@@ -63,6 +65,8 @@ export default function Home({ abots }: HomeProps): JSX.Element {
                     id={bot.id}
                     votes={bot.votes}
                     avatar={bot.avatar}
+                    nsfw={bot.nsfw}
+                    serverCount={bot.serverCount}
                     banner={bot.banner}
                     shortdesc={bot.shortdesc}
                   />
