@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface Partner {
   link: string;
-  image: string;
+  banner: string;
   logo: string;
   title: string;
   text: string;
@@ -57,7 +57,7 @@ export default function Main(): JSX.Element {
               <div
                 className="w-full h-36 rounded-md overflow-hidden"
                 style={{
-                  background: `url(${partner.image})`,
+                  background: `url(${partner.banner})`,
                   backgroundSize: "cover",
                 }}
               >
