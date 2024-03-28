@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import BotCard from "../components/cards/BotCard";
+import BotCard from "../../components/cards/BotCard";
 import { motion } from "framer-motion";
 
 interface Bot {
@@ -48,16 +48,16 @@ export default function Home({ abots }: HomeProps): JSX.Element {
     <div className="p-5 lg:p-10 pt-20 rounded-lg min-h-screen">
       <div className="pb-24">
         <p className="text-3xl italic font-semibold text-black/80 dark:text-white/80">
-          All Bots
+          Unapproved Bots
         </p>
         <p className="text-lg italic font-normal text-black/80 dark:text-white/80 mb-2">
-          All the bots present in TopicList
+          All the Unapproved present in TopicList
         </p>
 
         <motion.div variants={zcontainer} initial="hidden" animate="show">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-24 mt-5">
             {abots.map((bot: Bot) => {
-              if (!bot.approved) return null;
+              if (bot.approved) return null;
               return (
                 <motion.div key={bot.id} variants={zitem}>
                   <BotCard
