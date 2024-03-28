@@ -1,5 +1,5 @@
-import React from 'react';
-import Router from 'next/router';
+import React from "react";
+import Router from "next/router";
 
 const Dropdown = () => (
   <ul className="p-2 shadow menu dropdown-content z-[1] bf-bas-100 rounded-box w-52">

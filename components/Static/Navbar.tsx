@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import SidebarItem from "../SidebarItem";
 import { useRouter } from "next/router";
-import DropDown from "../other/dropdown"
+import DropDown from "../other/dropdown";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -22,10 +22,10 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {
   const router = useRouter();
-const [ showBotsDropdown, setBotsDropdown ] = useState(false);
-const handleBotsClick = () => {
+  const [showBotsDropdown, setBotsDropdown] = useState(false);
+  const handleBotsClick = () => {
     setBotsDropdown(!showBotsDropdown);
-}
+  };
 
   return (
     <>
@@ -60,7 +60,7 @@ const handleBotsClick = () => {
             text={"Bots"}
             icon={<FaRobot />}
           />
-          { showBotsDropdown && <DropDown />}
+          {showBotsDropdown && <DropDown />}
           <SidebarItem
             onClick={() => router.push("/servers")}
             text={"Servers"}
